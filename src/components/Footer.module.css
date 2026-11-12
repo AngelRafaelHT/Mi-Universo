@@ -1,0 +1,240 @@
+.footer {
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 80px 24px 40px;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.5), transparent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top */
+.top {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.brand {
+  flex: 0 0 260px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 14px;
+}
+
+.logoStar {
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, #6366f1, #a78bfa, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  color: #475569;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social:hover {
+  background: rgba(99,102,241,0.15);
+  border-color: rgba(99,102,241,0.4);
+  transform: translateY(-2px);
+}
+
+.links {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.linkGroup h4.groupTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.linkGroup ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #a5b4fc;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: rgba(99,102,241,0.06);
+  border: 1px solid rgba(99,102,241,0.15);
+  border-radius: 20px;
+  padding: 32px 40px;
+  margin-bottom: 48px;
+}
+
+.newsletterText h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 4px;
+}
+
+.newsletterText p {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.emailInput {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50px;
+  padding: 12px 20px;
+  color: #f1f5f9;
+  font-size: 0.875rem;
+  font-family: 'Outfit', sans-serif;
+  width: 240px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.emailInput::placeholder {
+  color: #475569;
+}
+
+.emailInput:focus {
+  border-color: rgba(99,102,241,0.5);
+  background: rgba(99,102,241,0.08);
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99,102,241,0.5);
+}
+
+/* Bottom */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.copy {
+  color: #334155;
+  font-size: 0.8rem;
+}
+
+.byline {
+  color: #1e293b;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .top {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .brand {
+    flex: none;
+  }
+  .newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .newsletterForm {
+    width: 100%;
+  }
+  .emailInput {
+    flex: 1;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .links {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
